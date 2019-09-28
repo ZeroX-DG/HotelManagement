@@ -1,0 +1,57 @@
+﻿@model Contact
+@using (@Html.BeginForm("Create", "contact", FormMethod.Post))
+{
+
+
+    <div asp-validation-summary="All"></div>
+    <div class="row" style="padding-top: 60px; box-sizing: border-box; min-height: calc(100vh - 150px);">
+        <div class="col-md-6">
+            <h3 class="text-center">Contact us</h3>
+            <div style="margin-top: 30px">
+                <p>if you have any questions. Please do not hesitate to <email address="invercargill@gmail.com" content="email us"></email></p>
+                <img src="~/images/contact-us.jpg" alt="Contact us" style="width: 100%" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="text-center">Send us a message</h3>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label asp-for="Name">Name:</label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name"></span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label asp-for="LastName">Last name:</label>
+                        <input asp-for="LastName" class="form-control" />
+                        <span asp-validation-for="LastName"></span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label asp-for="Email">Email:</label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email"></span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label asp-for="Message">Your Message:</label>
+                        <textarea asp-for="Message" rows="6" class="form-control"></textarea>
+                        <span asp-validation-for="Message"></span>
+                    </div>
+                </div>
+                <div class="col-md-12 text-right">
+                    <button class="btn btn-primary" style="padding: 10px 25px; box-sizing: border-box" type="submit">Send us your message</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+}
